@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Kotlin_EK3</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="starten">Starten</string>
+    <string name="trebicki_ek3">Trebicki EK3</string>
+
 </resources>
