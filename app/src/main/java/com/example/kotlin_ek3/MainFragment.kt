@@ -8,7 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import androidx.navigation.findNavController
+import com.example.kotlin_ek3.databinding.FragmentMainBinding
 import com.example.kotlin_ek3.databinding.FragmentTitleBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -19,24 +19,20 @@ private const val ARG_PARAM2 = "param2"
 /**
  * A simple [Fragment] subclass.
  * Activities that contain this fragment must implement the
- * [TitleFragment.OnFragmentInteractionListener] interface
+ * [MainFragment.OnFragmentInteractionListener] interface
  * to handle interaction events.
- * Use the [TitleFragment.newInstance] factory method to
+ * Use the [MainFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class TitleFragment : Fragment() {
+class MainFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = DataBindingUtil.inflate<FragmentTitleBinding>(inflater,
-            R.layout.fragment_title,container,false)
-        //The complete onClickListener with Navigation
-        binding.button.setOnClickListener { view : View ->
-            view.findNavController().navigate(R.id.action_titleFragment_to_mainFragment)
-        }
+        val binding = DataBindingUtil.inflate<FragmentMainBinding>(inflater,
+            R.layout.fragment_main,container,false)
         return binding.root
     }
 }
