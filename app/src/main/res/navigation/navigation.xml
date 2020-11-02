@@ -18,5 +18,22 @@
         android:id="@+id/mainFragment"
         android:name="com.example.kotlin_ek3.MainFragment"
         android:label="MainFragment"
-        tools:layout="@layout/fragment_main"/>
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_gutFragment"
+            app:destination="@id/gutFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_schlechtFragment"
+            app:destination="@id/schlechtFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gutFragment"
+        android:name="com.example.kotlin_ek3.GutFragment"
+        android:label="GutFragment"
+        tools:layout="@layout/fragment_gut" />
+    <fragment
+        android:id="@+id/schlechtFragment"
+        android:name="com.example.kotlin_ek3.SchlechtFragment"
+        android:label="SchlechtFragment"
+        tools:layout="@layout/fragment_schlecht"/>
 </navigation>

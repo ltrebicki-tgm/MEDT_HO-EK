@@ -10,6 +10,10 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import com.example.kotlin_ek3.databinding.FragmentMainBinding
 import com.example.kotlin_ek3.databinding.FragmentTitleBinding
+import android.widget.RadioButton
+import android.widget.RadioGroup
+import androidx.navigation.findNavController
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -33,6 +37,18 @@ class MainFragment : Fragment() {
     ): View? {
         val binding = DataBindingUtil.inflate<FragmentMainBinding>(inflater,
             R.layout.fragment_main,container,false)
+        binding.button2.setOnClickListener @Suppress("UNUSED_ANONYMOUS_PARAMETER")
+        { view: View ->
+            val id = binding.radioGroup.checkedRadioButtonId
+            if (id == R.id.radioButton_gut) {
+                view.findNavController()
+                    .navigate(R.id.action_mainFragment_to_gutFragment)
+            } else {
+                view.findNavController()
+                    .navigate(R.id.action_mainFragment_to_schlechtFragment)
+            }
+        }
+
         return binding.root
     }
 }
