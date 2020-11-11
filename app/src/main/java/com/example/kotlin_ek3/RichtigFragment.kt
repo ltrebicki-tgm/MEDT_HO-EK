@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.example.kotlin_ek3.databinding.FragmentRichtigBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -29,6 +30,9 @@ class GutFragment : Fragment() {
     ): View? {
         val binding = DataBindingUtil.inflate<FragmentRichtigBinding>(inflater,
             R.layout.fragment_richtig,container,false)
+        binding.buttonNeustart.setOnClickListener{view: View->
+            view.findNavController()
+                .navigate(R.id.action_richtigFragment_to_mainFragment)}
         return binding.root
     }
 }

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.example.kotlin_ek3.databinding.FragmentFalschBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -30,6 +31,9 @@ class SchlechtFragment : Fragment() {
     ): View? {
         val binding = DataBindingUtil.inflate<FragmentFalschBinding>(inflater,
             R.layout.fragment_falsch,container,false)
+        binding.buttonNeuerVersuch.setOnClickListener{view: View->
+            view.findNavController()
+                .navigate(R.id.action_falschFragment_to_mainFragment)}
         return binding.root
     }
 }

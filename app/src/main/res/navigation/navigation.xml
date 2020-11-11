@@ -20,24 +20,34 @@
         android:label="MainFragment"
         tools:layout="@layout/fragment_main">
         <action
-            android:id="@+id/action_mainFragment_to_gutFragment"
-            app:destination="@id/gutFragment"
+            android:id="@+id/action_mainFragment_to_richtigFragment"
+            app:destination="@id/richtigFragment"
             app:popUpTo="@+id/mainFragment"
             app:popUpToInclusive="true" />
         <action
-            android:id="@+id/action_mainFragment_to_schlechtFragment"
-            app:destination="@id/schlechtFragment"
+            android:id="@+id/action_mainFragment_to_falschFragment"
+            app:destination="@id/falschFragment"
             app:popUpTo="@+id/mainFragment"
             app:popUpToInclusive="true" />
     </fragment>
     <fragment
-        android:id="@+id/gutFragment"
+        android:id="@+id/richtigFragment"
         android:name="com.example.kotlin_ek3.GutFragment"
-        android:label="GutFragment"
-        tools:layout="@layout/fragment_richtig" />
+        android:label="RichtigFragment"
+        tools:layout="@layout/fragment_richtig">
+        <action
+            android:id="@+id/action_richtigFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@+id/titleFragment" />
+    </fragment>
     <fragment
-        android:id="@+id/schlechtFragment"
+        android:id="@+id/falschFragment"
         android:name="com.example.kotlin_ek3.SchlechtFragment"
-        android:label="SchlechtFragment"
-        tools:layout="@layout/fragment_falsch"/>
+        android:label="FalschFragment"
+        tools:layout="@layout/fragment_falsch" >
+        <action
+            android:id="@+id/action_falschFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@+id/titleFragment" />
+    </fragment>
 </navigation>

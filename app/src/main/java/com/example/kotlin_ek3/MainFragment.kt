@@ -1,7 +1,5 @@
 package com.example.kotlin_ek3
 
-import android.content.Context
-import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,9 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import com.example.kotlin_ek3.databinding.FragmentMainBinding
-import com.example.kotlin_ek3.databinding.FragmentTitleBinding
-import android.widget.RadioButton
-import android.widget.RadioGroup
 import androidx.navigation.findNavController
 
 
@@ -42,10 +37,10 @@ class MainFragment : Fragment() {
             val id = binding.radioGroup.checkedRadioButtonId
             if (id == R.id.radioButton_gut) {
                 view.findNavController()
-                    .navigate(R.id.action_mainFragment_to_gutFragment)
+                    .navigate(R.id.action_mainFragment_to_richtigFragment)
             } else {
                 view.findNavController()
-                    .navigate(R.id.action_mainFragment_to_schlechtFragment)
+                    .navigate(R.id.action_mainFragment_to_falschFragment)
             }
         }
 

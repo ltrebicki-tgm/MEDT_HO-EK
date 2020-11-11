@@ -10,12 +10,22 @@
 
 
         <TextView
-            android:id="@+id/textView_schlecht"
+            android:id="@+id/textView_falsch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Schlecht"
+            android:text="Falsch"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_neuerVersuch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Neuer Versuch"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_falsch" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
