@@ -32,10 +32,10 @@ class MainFragment : Fragment() {
     ): View? {
         val binding = DataBindingUtil.inflate<FragmentMainBinding>(inflater,
             R.layout.fragment_main,container,false)
-        binding.button2.setOnClickListener @Suppress("UNUSED_ANONYMOUS_PARAMETER")
+        binding.buttonSubmit.setOnClickListener @Suppress("UNUSED_ANONYMOUS_PARAMETER")
         { view: View ->
             val id = binding.radioGroup.checkedRadioButtonId
-            if (id == R.id.radioButton_gut) {
+            if (id == R.id.radioButton_gut && id != 1) {
                 view.findNavController()
                     .navigate(R.id.action_mainFragment_to_richtigFragment)
             } else {

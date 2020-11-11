@@ -9,6 +9,10 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.example.kotlin_ek3.databinding.FragmentTitleBinding
+import android.R.attr.duration
+import android.widget.Toast
+
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
