@@ -1,15 +1,12 @@
 package com.example.kotlin_ek3
 
-import android.content.Context
-import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import com.example.kotlin_ek3.databinding.FragmentMainBinding
-import com.example.kotlin_ek3.databinding.FragmentSchlechtBinding
+import com.example.kotlin_ek3.databinding.FragmentFalschBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -31,8 +28,8 @@ class SchlechtFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = DataBindingUtil.inflate<FragmentSchlechtBinding>(inflater,
-            R.layout.fragment_schlecht,container,false)
+        val binding = DataBindingUtil.inflate<FragmentFalschBinding>(inflater,
+            R.layout.fragment_falsch,container,false)
         return binding.root
     }
 }

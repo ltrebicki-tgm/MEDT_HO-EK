@@ -25,20 +25,22 @@
                 android:id="@+id/radioButton_gut"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Gut" />
+                android:text="Richtig" />
 
             <RadioButton
                 android:id="@+id/radioButton_schlecht"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Schlecht" />
+                android:text="Falsch" />
         </RadioGroup>
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:layout_marginTop="16dp"
+            android:text="Das TGM hat über 2000 Schüler"
+            android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -48,7 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Button"
+            android:text="Absenden"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
