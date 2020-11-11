@@ -55,4 +55,9 @@
         android:name="com.example.kotlin_ek3.AboutFragment"
         android:label="fragment_about"
         tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/regelnFragment"
+        android:name="com.example.kotlin_ek3.RegelnFragment"
+        android:label="RegelnFragment"
+        tools:layout="@layout/fragment_regeln" />
 </navigation>
