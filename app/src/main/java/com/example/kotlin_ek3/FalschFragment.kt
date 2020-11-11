@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.example.kotlin_ek3.databinding.FragmentFalschBinding
@@ -29,6 +30,7 @@ class SchlechtFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        (activity as AppCompatActivity).supportActionBar?.title = "Ergebnis"
         val binding = DataBindingUtil.inflate<FragmentFalschBinding>(inflater,
             R.layout.fragment_falsch,container,false)
         binding.buttonNeuerVersuch.setOnClickListener{view: View->

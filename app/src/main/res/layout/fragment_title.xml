@@ -16,7 +16,9 @@
             android:text="@string/starten"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:icon="@drawable/ic_tag_faces_24px"
+            style="@style/Widget.MaterialComponents.Button.Icon"/>
 
         <ImageView
             android:id="@+id/imageView"

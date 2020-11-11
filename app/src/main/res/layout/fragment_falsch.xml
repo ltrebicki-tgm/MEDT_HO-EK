@@ -16,7 +16,8 @@
             android:text="Falsch"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
 
         <Button
             android:id="@+id/button_neuerVersuch"
@@ -26,6 +27,8 @@
             android:text="Neuer Versuch"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView_falsch" />
+            app:layout_constraintTop_toBottomOf="@+id/textView_falsch"
+            app:icon="@drawable/ic_clear_24px"
+            style="@style/Widget.MaterialComponents.Button.Icon"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

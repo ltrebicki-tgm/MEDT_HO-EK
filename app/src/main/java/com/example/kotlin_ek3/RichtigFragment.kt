@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.example.kotlin_ek3.databinding.FragmentRichtigBinding
@@ -28,6 +29,7 @@ class GutFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        (activity as AppCompatActivity).supportActionBar?.title = "Ergebnis"
         val binding = DataBindingUtil.inflate<FragmentRichtigBinding>(inflater,
             R.layout.fragment_richtig,container,false)
         binding.buttonNeustart.setOnClickListener{view: View->

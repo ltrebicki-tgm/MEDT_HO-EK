@@ -14,7 +14,6 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="12dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -25,13 +24,15 @@
                 android:id="@+id/radioButton_gut"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Richtig" />
+                android:text="Richtig"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
 
             <RadioButton
                 android:id="@+id/radioButton_schlecht"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Falsch" />
+                android:text="Falsch"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
         </RadioGroup>
 
         <TextView
@@ -40,6 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Das TGM hat über 2000 Schüler"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -54,7 +56,9 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+            app:icon="@drawable/ic_send_24px"
+            style="@style/Widget.MaterialComponents.Button.Icon"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

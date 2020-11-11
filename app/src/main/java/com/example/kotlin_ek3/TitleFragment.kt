@@ -11,7 +11,7 @@ import androidx.navigation.ui.NavigationUI
 import com.example.kotlin_ek3.databinding.FragmentTitleBinding
 import android.R.attr.duration
 import android.widget.Toast
-
+import androidx.appcompat.app.AppCompatActivity
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -34,6 +34,7 @@ class TitleFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        (activity as AppCompatActivity).supportActionBar?.title = "Home"
         val binding = DataBindingUtil.inflate<FragmentTitleBinding>(inflater,
             R.layout.fragment_title,container,false)
         //The complete onClickListener with Navigation
