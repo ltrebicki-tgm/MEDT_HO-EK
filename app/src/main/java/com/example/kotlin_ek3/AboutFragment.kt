@@ -33,11 +33,11 @@ class AboutFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        (activity as AppCompatActivity).supportActionBar?.title = "Über die App"
         val binding = DataBindingUtil.inflate<FragmentAboutBinding>(
             inflater,
             R.layout.fragment_about, container, false
         )
+        (activity as AppCompatActivity).supportActionBar?.title = "Über die App"
         binding.buttonAutor.setOnClickListener {
             Snackbar.make(
                 buttonAutor,
