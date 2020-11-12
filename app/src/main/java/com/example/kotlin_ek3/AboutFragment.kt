@@ -8,6 +8,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
+import com.example.kotlin_ek3.databinding.FragmentAboutBinding
+import com.example.kotlin_ek3.databinding.FragmentFalschBinding
+import com.google.android.material.snackbar.Snackbar
+import kotlinx.android.synthetic.main.fragment_about.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -29,7 +34,25 @@ class AboutFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         (activity as AppCompatActivity).supportActionBar?.title = "Über die App"
+        val binding = DataBindingUtil.inflate<FragmentAboutBinding>(
+            inflater,
+            R.layout.fragment_about, container, false
+        )
+        binding.buttonAutor.setOnClickListener {
+            Snackbar.make(
+                buttonAutor,
+                "Autor: Lukas Trebicki",
+                Snackbar.LENGTH_LONG
+            ).setAction("Schliessen"){}.setActionTextColor(resources.getColor(R.color.colorAccent)).show()
+        }
+        binding.buttonVersion.setOnClickListener {
+            Snackbar.make(
+                buttonVersion,
+                "Version: 1.2.0",
+                Snackbar.LENGTH_LONG
+            ).setAction("Schliessen"){}.setActionTextColor(resources.getColor(R.color.colorAccent)).show()
+        }
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_about, container, false)
+        return binding.root
     }
 }

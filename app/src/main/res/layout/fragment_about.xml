@@ -17,7 +17,33 @@
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
             android:text="About"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buttonAutor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Autor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_aboutTitle" />
+
+        <Button
+            android:id="@+id/buttonVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Version"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonAutor" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
