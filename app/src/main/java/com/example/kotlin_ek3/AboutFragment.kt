@@ -7,12 +7,19 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.NonNull
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.FragmentActivity
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentPagerAdapter
 import com.example.kotlin_ek3.databinding.FragmentAboutBinding
 import com.example.kotlin_ek3.databinding.FragmentFalschBinding
 import com.google.android.material.snackbar.Snackbar
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.fragment_about.*
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -28,7 +35,6 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class AboutFragment : Fragment() {
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -38,21 +44,22 @@ class AboutFragment : Fragment() {
             R.layout.fragment_about, container, false
         )
         (activity as AppCompatActivity).supportActionBar?.title = "Über die App"
-        binding.buttonAutor.setOnClickListener {
-            Snackbar.make(
-                buttonAutor,
-                "Autor: Lukas Trebicki",
-                Snackbar.LENGTH_LONG
-            ).setAction("Schliessen"){}.setActionTextColor(resources.getColor(R.color.colorAccent)).show()
-        }
-        binding.buttonVersion.setOnClickListener {
-            Snackbar.make(
-                buttonVersion,
-                "Version: 1.2.0",
-                Snackbar.LENGTH_LONG
-            ).setAction("Schliessen"){}.setActionTextColor(resources.getColor(R.color.colorAccent)).show()
-        }
+
+
+
+        var viewPager = binding.viewPager2
+        var adapter = StateAdapter((activity as FragmentActivity).supportFragmentManager, lifecycle)
+        viewPager.adapter = adapter
+
+        var names:ArrayList<String> = arrayListOf("Autor", "Version")
+        var tabLayout: TabLayout = binding.tabLayout
+        TabLayoutMediator(tabLayout, viewPager){tab, position ->
+            tab.text = names[position]
+        }.attach()
+
+
         // Inflate the layout for this fragment
         return binding.root
     }
+
 }
