@@ -13,22 +13,36 @@
             android:id="@+id/textView_falsch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Falsch"
+            android:layout_marginTop="16dp"
+            android:text="Falsch!"
+            android:textSize="24sp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/button_neuerVersuch"
+            style="@style/Widget.MaterialComponents.Button.Icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Neuer Versuch"
+            app:icon="@drawable/ic_clear_24px"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView_falsch"
-            app:icon="@drawable/ic_clear_24px"
-            style="@style/Widget.MaterialComponents.Button.Icon"/>
+            app:layout_constraintTop_toBottomOf="@+id/textView_fail" />
+
+        <TextView
+            android:id="@+id/textView_fail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Leider falsch, probiers einfach nochmal!"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_falsch" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

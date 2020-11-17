@@ -8,27 +8,41 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
         <TextView
             android:id="@+id/textView_richtig"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Richtig"
+            android:layout_marginTop="16dp"
+            android:text="Richtig!"
+            android:textSize="24sp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/button_neustart"
+            style="@style/Widget.MaterialComponents.Button.Icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Neues Spiel"
+            app:icon="@drawable/ic_check_24px"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_congrats" />
+
+        <TextView
+            android:id="@+id/textView_congrats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Glückwunsch, du hast das Quiz geschafft!"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView_richtig"
-            app:icon="@drawable/ic_check_24px"
-            style="@style/Widget.MaterialComponents.Button.Icon"/>
+            app:layout_constraintTop_toBottomOf="@+id/textView_richtig" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

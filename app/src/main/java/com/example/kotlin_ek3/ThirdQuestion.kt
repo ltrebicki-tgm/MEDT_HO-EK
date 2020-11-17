@@ -7,6 +7,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
+import com.example.kotlin_ek3.databinding.FragmentThirdQuestionBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +30,21 @@ class ThirdQuestion : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_third_question, container, false)
+        (activity as AppCompatActivity).supportActionBar?.title = "Zweite Frage"
+        val binding = DataBindingUtil.inflate<FragmentThirdQuestionBinding>(inflater,
+            R.layout.fragment_third_question,container,false)
+        binding.buttonSubmitThird.setOnClickListener @Suppress("UNUSED_ANONYMOUS_PARAMETER")
+        { view: View ->
+            val id = binding.radioGroupThird.checkedRadioButtonId
+            if (id == R.id.radioButton_gut_third && id != 1) {
+                view.findNavController()
+                    .navigate(R.id.action_thirdQuestion_to_falschFragment)
+            } else {
+                view.findNavController()
+                    .navigate(R.id.action_thirdQuestion_to_richtigFragment)
+            }
+        }
+
+        return binding.root
     }
 }
