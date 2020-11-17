@@ -39,7 +39,7 @@ class MainFragment : Fragment() {
             val id = binding.radioGroup.checkedRadioButtonId
             if (id == R.id.radioButton_gut && id != 1) {
                 view.findNavController()
-                    .navigate(R.id.action_mainFragment_to_richtigFragment)
+                    .navigate(R.id.action_mainFragment_to_secondQuestion)
             } else {
                 view.findNavController()
                     .navigate(R.id.action_mainFragment_to_falschFragment)

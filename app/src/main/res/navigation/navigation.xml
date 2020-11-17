@@ -20,8 +20,8 @@
         android:label="MainFragment"
         tools:layout="@layout/fragment_main">
         <action
-            android:id="@+id/action_mainFragment_to_richtigFragment"
-            app:destination="@id/richtigFragment"
+            android:id="@+id/action_mainFragment_to_secondQuestion"
+            app:destination="@+id/secondQuestion"
             app:popUpTo="@+id/mainFragment"
             app:popUpToInclusive="true" />
         <action
@@ -60,4 +60,28 @@
         android:name="com.example.kotlin_ek3.RegelnFragment"
         android:label="RegelnFragment"
         tools:layout="@layout/fragment_regeln" />
+    <fragment
+        android:id="@+id/secondQuestion"
+        android:name="com.example.kotlin_ek3.SecondQuestion"
+        android:label="SecondQuestion"
+        tools:layout="@layout/fragment_second_question" >
+        <action
+            android:id="@+id/action_secondQuestion_to_thirdQuestion"
+            app:destination="@id/thirdQuestion" />
+        <action
+            android:id="@+id/action_secondQuestion_to_falschFragment"
+            app:destination="@id/falschFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdQuestion"
+        android:name="com.example.kotlin_ek3.ThirdQuestion"
+        android:label="ThirdQuestion"
+        tools:layout="@layout/fragment_third_question" >
+        <action
+            android:id="@+id/action_thirdQuestion_to_richtigFragment"
+            app:destination="@id/richtigFragment" />
+        <action
+            android:id="@+id/action_thirdQuestion_to_falschFragment"
+            app:destination="@id/falschFragment" />
+    </fragment>
 </navigation>
