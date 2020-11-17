@@ -12,7 +12,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Version"
+            android:text="@string/version"
             android:textAppearance="@style/TextAppearance.AppCompat.Button"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -25,14 +25,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
-            android:text="Version"
+            android:text="@string/version"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+            app:layout_constraintTop_toBottomOf="@+id/textView_VersionDescription" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/textView_VersionDescription"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -41,7 +40,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:lineSpacingExtra="4sp"
-            android:text="Dieses Fragment gibt Auskunft darüber, welche Version der App momentan installiert ist. Zusätzlich ist ein Repository vorhanden, auf dem die einzelnen Commits und Änderungen angesehen werden können. Einfach auf den Button klicken und eine entsprechende Snackbar wird geöffnet. Dies ist ein eigenes Fragment. "
+            android:text="@string/version_desc"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"

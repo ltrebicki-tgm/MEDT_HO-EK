@@ -18,31 +18,32 @@
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView_question_third">
+            app:layout_constraintTop_toBottomOf="@+id/textView_thirdQuestion">
 
             <RadioButton
                 android:id="@+id/radioButton_gut_third"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Richtig"
+                android:text="@string/richtig"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
 
             <RadioButton
                 android:id="@+id/radioButton_schlecht_third"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Falsch"
+                android:text="@string/falsch"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
         </RadioGroup>
 
         <TextView
-            android:id="@+id/textView_question_third"
-            android:layout_width="wrap_content"
+            android:id="@+id/textView_thirdQuestion"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="24dp"
             android:layout_marginEnd="16dp"
-            android:text="Das TGM hat 6 Gebäude"
+            android:text="@string/third_question"
+            android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -55,7 +56,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Absenden"
+            android:text="@string/absenden"
             app:icon="@drawable/ic_send_24px"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"

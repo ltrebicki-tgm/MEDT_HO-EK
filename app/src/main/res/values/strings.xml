@@ -5,5 +5,27 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="starten">Starten</string>
     <string name="trebicki_ek3">Trebicki EK3</string>
+    <string name="splash_logo_contentDescription">splash logo</string>
+    <string name="splash_textBy">by Lukas Trebicki</string>
+    <string name="splash_textFach">MEDT EK2/EK3</string>
+    <string name="autor">Autor</string>
+    <string name="version">Version</string>
+    <string name="autor_desc">Dieses Fragment gibt Auskunft darüber, wer der Autor dieser App ist. Es wurde mit dem Material Framework gearbeitet. Aus diesem wurden diverse Sachen wie eine Snackbar, Buttons und ein Navdrawer Menu verwendet. Der Splashscreen beim Starten der App dauert 1,5 Sekunden.</string>
+    <string name="version_desc">Dieses Fragment gibt Auskunft darüber, welche Version der App momentan installiert ist. Zusätzlich ist ein Repository vorhanden, auf dem die einzelnen Commits und Änderungen angesehen werden können. Einfach auf den Button klicken und eine entsprechende Snackbar wird geöffnet. Dies ist ein eigenes Fragment.</string>
+    <string name="falsch">Falsch</string>
+    <string name="richtig">Richtig</string>
+    <string name="neuer_versuch">Neuer Versuch</string>
+    <string name="falsch_message">Leider falsch, probiers einfach nochmal!</string>
+    <string name="first_question">Das TGM hat über 2000 Schüler</string>
+    <string name="absenden">Absenden</string>
+    <string name="second_question">Der Abteilungsvorstand ist Koppensteiner</string>
+    <string name="third_question">Das TGM hat mehr als 6 Gebäude</string>
+    <string name="neues_spiel">Neues Spiel</string>
+    <string name="richtig_message">Glückwunsch, du hast das Quiz geschafft!</string>
+    <string name="regeln">Regeln</string>
+    <string name="neue_regel_definieren">Neue Regel definieren</string>
+    <string name="rule">Klicke die Radiobuttons an</string>
+    <string name="clear_preference">Clear Preference</string>
+    <string name="tgm_logo">tgm logo</string>
 
 </resources>

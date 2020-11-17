@@ -21,13 +21,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:icon="@drawable/ic_tag_faces_24px"
-                android:text="Autor" />
+                android:text="@string/autor" />
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:icon="@drawable/ic_help_outline_24px"
-                android:text="Version" />
+                android:text="@string/version" />
 
 
         </com.google.android.material.tabs.TabLayout>
