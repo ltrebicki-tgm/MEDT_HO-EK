@@ -52,9 +52,13 @@ class AboutFragment : Fragment() {
         viewPager.adapter = adapter
 
         var names:ArrayList<String> = arrayListOf("Autor", "Version")
+        // Icons werden beim Mediator überschrieben, wieder adden in der Schleife
+        var icons:ArrayList<Int> = arrayListOf(R.drawable.ic_tag_faces_24px, R.drawable.ic_help_outline_24px)
+
         var tabLayout: TabLayout = binding.tabLayout
         TabLayoutMediator(tabLayout, viewPager){tab, position ->
             tab.text = names[position]
+            tab.icon = context!!.getResources().getDrawable(icons[position], context!!.theme)
         }.attach()
 
 
