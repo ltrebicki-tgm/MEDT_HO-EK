@@ -34,7 +34,7 @@ private const val ARG_PARAM2 = "param2"
 class SchlechtFragment : Fragment() {
     val CHANNEL_ID = "channelID"
     val CHANNEL_NAME = "channelName"
-    val NOTIFICAITON_ID = 0
+    val NOTIFICATION_ID = 0
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -64,7 +64,7 @@ class SchlechtFragment : Fragment() {
 
 
         val notificationManager = NotificationManagerCompat.from(context!!)
-        notificationManager.notify(NOTIFICAITON_ID, notification)
+        notificationManager.notify(NOTIFICATION_ID, notification)
 
         return binding.root
     }
