@@ -55,7 +55,7 @@ class RegelnFragment : Fragment() {
         })
         binding.buttonClearPreference.setOnClickListener {
             sharedPreference?.edit()?.remove("regeltext")?.apply()
-            Log.d("Cleared",sharedPreference?.getString("regelext","ds").toString())
+            Log.d("Cleared",sharedPreference?.getString("regelext","no value").toString())
         }
         // Inflate the layout for this fragment
         return binding.root
@@ -71,7 +71,7 @@ class RegelnFragment : Fragment() {
         super.onResume()
 
         var sharedPreference =  this.activity?.getSharedPreferences("pref", Context.MODE_PRIVATE)
-        Log.d("onResume", sharedPreference?.getString("regelext","ds").toString())
+        Log.d("onResume", sharedPreference?.getString("regelext","on resume no value").toString())
         textViewRegel.text =  sharedPreference?.getString("regeltext","Klicke die Radiobuttons an").toString()
     }
 
